@@ -73,13 +73,14 @@ while True:
     elif action == 3:
 
         name = input("Enter transfer account name: ")
+        number = input("Enter transfer account number: ")        
         balance = float( input( "Enter transfer account balance: " ) )
-        acc2 = BankAccount("123", name, balance)
+        acc2 = BankAccount(number, name, balance)
 
         trans = int( input( "Enter amount to transfer: " ) )
         acc1.transfer(acc2, trans)
 
-        print(f"account balance for other account after transaction:  {acc2.balance}")
+        print(f"account balance for other account after transaction: {acc2.balance}")
 
     elif action == 4:
         print( acc1.balance )
